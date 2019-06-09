@@ -1,10 +1,9 @@
 #ifndef H_Watering
 #define H_Watering
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "../general.h"
 
-#include "py_caller/py_calls.h"
+#include "../py_caller/py_calls.h"
 
 /** Cherche le pourcentage d'humidité sur le capteur d'humidité. Cette valeur sera tester toute les 10 secondes sur notre maquette.**/
 int getHumidity();
