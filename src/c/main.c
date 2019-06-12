@@ -1,17 +1,19 @@
-//#include "general.h"
-//#include "mesures/mesures.h"
-
+#include "general.h"
+#include "mesures/mesures.h"
+#include "py_caller/py_calls.h"
 
 #define NB_MESURES 10
 
 
 int main()
-{/*
+{
     struct timespec timer1s = {1, 0};
     int i;
     int mesure_tab[NB_MESURES], mesure_moy = 0;
 
     //Affichage: démmarage
+    printEmotion(EMOTION_SLEEP);
+    printText("Bonjour, Je suis Potipot!");
 
     //Création d'une connection avec le serveur
 
@@ -38,5 +40,5 @@ int main()
         
     }
 
-*/
+
 }

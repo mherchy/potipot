@@ -34,6 +34,39 @@ int printText(char * txt)
 
 
 
+int printEmotion(int emotion_code)
+{
+    char * command = init_command();
+    strcat(command, PY_LCDM_PATH);
+
+    switch (emotion_code)
+    {
+
+        case EMOTION_SMILE:
+            strcat(command,"smile.py ");
+            break;
+
+        case EMOTION_SAD:
+            strcat(command,"sad.py ");
+            break;
+    
+        default:
+            strcat(command,"sleep.py ");
+            break;
+    }
+    
+
+    printf("command: ");
+    printf(command);
+
+    int r = system(command);
+    destroy_command(command);
+    return r;
+}
+
+
+
+
 // IN
 
 /**
